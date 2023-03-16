@@ -224,6 +224,10 @@ i {
   gap: 8px;
 }
 
+.fa-square-js {
+  font-size: 100px;
+}
+
 @media (min-width: 768px) {
   .hamburger {
     display: none;

@@ -224,8 +224,8 @@ i {
   gap: 8px;
 }
 
-.fa-square-js {
-  font-size: 100px;
+.js {
+  font-size: 90px;
 }
 
 @media (min-width: 768px) {

@@ -3,9 +3,10 @@ const navLinksContainer = document.querySelector('.nav-links');
 const clo = document.querySelectorAll('.scroll');
 const toggleNav = () => {
   hamburgerToggler.classList.toggle('open');
-  const ariaToggle = hamburgerToggler.getAttribute('aria-expanded') === 'true'
-    ? 'false'
-    : 'true';
+  const ariaToggle =
+    hamburgerToggler.getAttribute('aria-expanded') === 'true'
+      ? 'false'
+      : 'true';
   hamburgerToggler.setAttribute('aria-expanded', ariaToggle);
   navLinksContainer.classList.toggle('open');
   if (ariaToggle === 'true') {
@@ -117,3 +118,33 @@ if (screenWidth < 768) {
     i += 1;
   }
 }
+
+const enrol = document.querySelector('.enrol');
+
+function popForm() {
+  const popform = document.createElement('div');
+  popform.className = 'pop-form';
+  popform.innerHTML = `
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Pasword</label>
+            <input type="password" class="form-control" id="password" aria-describeby="pass">
+            <div id="pass" class="form-text"> Create a strong password</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    `;
+  document.body.appendChild(popform);
+  console.log('hi');
+}
+
+enrol.addEventListener('click', popForm);

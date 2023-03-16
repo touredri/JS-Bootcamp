@@ -73,7 +73,7 @@ Tech stack
 - [Live Demo Link]( https://touredri.github.io/JS-Bootcamp/)
 
 
-<!-- - [video Link](https://www.loom.com/share/1f2943ca12ee4b4e97db22f208077ecb) -->
+- [video Link](https://www.loom.com/share/f415ec53fe5042428b6ba050f3fbe620)
 
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

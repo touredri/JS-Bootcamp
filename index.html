@@ -27,9 +27,20 @@
     <title>JS Bootcamp</title>
   </head>
   <body class="p-0">
-    <header class="header d-flex justify-content-between w-100">
+    <div class="header1 d-none d-md-flex w-100 justify-content-end">
+      <div class="social d-flex align-items-center">
+        <a href="https://www.facebook.com/"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+        <h4>English</h4>
+        <h4>My Page</h4>
+        <h4>Logout</h4>
+      </div>
+    </div>
+    <div class="header2 d-flex justify-content-between w-">
       <div class="logo d-flex align-items-center w-1">
-        <img src="./images/logo1.png" alt="Logo" class="logo-img" />
+        <a href="index.html"><img src="./images/logo1.png" alt="Logo" class="logo-img" /></a>
       </div>
       <nav>
         <button
@@ -43,30 +54,30 @@
           <span></span>
         </button>
         <ul class="nav-links d-non d-md-flex">
-          <li><a href="#porfolio" class="scroll">Home</a></li>
+          <li><a href="index.html" class="scroll">Home</a></li>
           <li><a href="#speaker" class="scroll">Speaker</a></li>
-          <li><a href="#about" class="scroll">about</a></li>
+          <li><a href="about.html" class="scroll">about</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
 
-    <section class="present" id="porfolio">
-      <p class="m-0 text-light">Hello! Sharing world</p>
-      <h1 class="">Welcome to the best JavaScript BootCamp</h1>
+    <div class="present" id="home"> <section class="bg w-100">
+      <p class=" slt">"Hello! Sharing world"</p>
+      <h1 class="top">Welcome to the best JavaScript BootCamp</h1>
       <p class="info border-2">
         Unlock your potential as a web developer with our comprehensive
         JavaScript bootcamp. From novice to expert, we'll guide you through the
         ins and outs of the language and give you the skills you need to create
         dynamic and interactive web applications.
       </p>
-      <h2>2023.04.01 (THU) ~ 05.20 (FRI)</h2>
-    </section>
+      <h2>2023.04.01 (THU) ~ 05.20 (FRI)</h2></section>
+    </div>
 
     <section class="course">
       <h3 class="entete">Course Program</h3>
       <hr />
       <div class="program-container">
-        <div class="program d-flex flex-row flex-md-column">
+        <!-- <div class="program d-flex flex-row flex-md-column">
           <div
             class="col-4 d-flex flex-column justify-content-center align-items-center"
           >
@@ -77,7 +88,7 @@
             This includes data types, variables, operators, control structures,
             functions, and arrays.
           </p>
-        </div>
+        </div> -->
         <div class="program d-flex flex-row flex-md-column">
           <div
             class="col-4 d-flex flex-column justify-content-center align-items-center"
@@ -160,51 +171,6 @@
       </button>
     </section>
 
-    <section class="about" id="about">
-      <h2 class="text-center">
-        JavaScript BootCamp for scratch to professional
-      </h2>
-      <p class="bg-light detail border-2 p-3 m-0 text-center">
-        Welcome to our JavaScript Bootcamp! Our course is designed to teach you
-        the fundamentals of JavaScript programming from the ground up. ced
-        instructors will guide you through hands-on exercises and real-world
-        projects to help you build a solid foundation in JavaScript programming.
-        You'll also have access to our online community, where you can ask
-        questions and get feedback from other students and instructors.
-      </p>
-      <h2>Best JavaScript Course</h2>
-      <hr />
-      <p class="text-center w-50">
-        We are excited to kick off our event and share our passion for coding
-        with you. We have designed this event to cater to both beginners and
-        experienced developers who want to expand their skill set.
-      </p>
-      <div
-        class="d-flex align-items-center justify-content-center p-3 event border border-2"
-      >
-        <i class="fa-brands fa-square-js m-2 js"></i>
-        <h3>
-          JavaScript <br />
-          2023
-        </h3>
-      </div>
-      <hr />
-      <h3>See next sessions</h3>
-      <hr />
-      <h5>Take a look to our next BootCamp on React and Ruby</h5>
-      <div class="d-flex flex-column flex-md-row mb-3 even">
-        <div class="next text-center">
-          <h2>Ruby</h2>
-          <br />
-          <h4>The full Ruby course on 17 May</h4>
-        </div>
-        <div class="next text-center">
-          <h2>React</h2>
-          <br />
-          <h4>The full React course on 17 July</h4>
-        </div>
-      </div>
-    </section>
     <section class="partner">
       <h2 class="text-center">Our partner</h2>
       <hr />

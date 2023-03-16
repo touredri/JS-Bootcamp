@@ -66,10 +66,12 @@ const prof = [
 ];
 
 const speaker = document.getElementById('prof');
-prof.forEach((elm) => {
-  const div = document.createElement('div');
-  div.className = 'row no-gutters col-md-6';
-  div.innerHTML = `
+const screenWidth = window.innerWidth;
+if (screenWidth >= 768) {
+  prof.forEach((elm) => {
+    const div = document.createElement('div');
+    div.className = 'row no-gutters col-md-6';
+    div.innerHTML = `
   <div class="row no-gutters col-md-12">
   <div class="col-5">
     <img src="${elm.image}" class="card-img border border-1" alt="prof image" />
@@ -86,5 +88,32 @@ prof.forEach((elm) => {
   </div>
 </div>
             `;
-  speaker.appendChild(div);
-});
+    speaker.appendChild(div);
+  });
+}
+if (screenWidth < 768) {
+  let i = 0;
+  while (i < 3) {
+    const div = document.createElement('div');
+    div.className = 'row no-gutters col-md-6';
+    div.innerHTML = `
+      <div class="row no-gutters col-md-12">
+      <div class="col-5">
+        <img src="${prof[i].image}" class="card-img border border-1" alt="prof image" />
+      </div>
+      <div class="col-7 p-0">
+        <div class="car-body">
+          <h3 class="card-title">${prof[i].name}</h3>
+          <p class="profession m-1">${prof[i].profession}</p>
+          <hr class="w-50 m-0" />
+          <p class="background">
+            ${prof[i].descrition}
+          </p>
+        </div>
+      </div>
+    </div>
+                `;
+    speaker.appendChild(div);
+    i += 1;
+  }
+}

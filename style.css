@@ -261,8 +261,6 @@ h2 {
   gap: 5px;
   padding: 5px;
   font-size: 20px;
-
-  /* border: 1px solid #fff; */
   background-color: #3d4047;
   color: #fff;
 }
@@ -385,7 +383,6 @@ hr {
   .program p {
     text-align: center;
     font-size: 15px;
-    padding: 20px;
   }
 
   .theme {

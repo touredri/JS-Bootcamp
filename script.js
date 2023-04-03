@@ -3,10 +3,9 @@ const navLinksContainer = document.querySelector('.nav-links');
 const clo = document.querySelectorAll('.scroll');
 const toggleNav = () => {
   hamburgerToggler.classList.toggle('open');
-  const ariaToggle =
-    hamburgerToggler.getAttribute('aria-expanded') === 'true'
-      ? 'false'
-      : 'true';
+  const ariaToggle = hamburgerToggler.getAttribute('aria-expanded') === 'true'
+    ? 'false'
+    : 'true';
   hamburgerToggler.setAttribute('aria-expanded', ariaToggle);
   navLinksContainer.classList.toggle('open');
   if (ariaToggle === 'true') {
@@ -143,18 +142,20 @@ function popForm() {
             <input type="password" name="password" class="form-control" id="password" aria-describeby="pass">
             <div id="pass" class="form-text"> Create a strong password</div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary mr-1">Submit</button> 
+        <button type="button" class="btn btn-danger">cancel</button>
     </form>
     `;
   contai.appendChild(popform);
   document.body.appendChild(contai);
-  // console.log('hi');
-  // contai.addEventListener('click', () => {
-  //   document.body.removeChild(contai);
-  // });
-  // popform.addEventListener('click', () => {
-  //   document.body.appendChild(contai);
-  // });
+  const cancel = document.querySelector('.btn-danger');
+  cancel.addEventListener('click', () => {
+    contai.remove();
+  });
+  window.addEventListener('click', (e) => {
+    if (e.target === contai) {
+      contai.remove();
+    }
+  });
 }
-
 enrol.addEventListener('click', popForm);

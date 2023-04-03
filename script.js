@@ -117,3 +117,45 @@ if (screenWidth < 768) {
     i += 1;
   }
 }
+
+const enrol = document.querySelector('.enrol');
+
+function popForm() {
+  const contai = document.createElement('div');
+  const popform = document.createElement('div');
+  popform.className = 'pop-form';
+  contai.className = 'contain';
+  popform.innerHTML = `
+    <form action="https://formspree.io/f/xbjearpw"
+    method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Pasword</label>
+            <input type="password" name="password" class="form-control" id="password" aria-describeby="pass">
+            <div id="pass" class="form-text"> Create a strong password</div>
+        </div>
+        <button type="submit" class="btn btn-primary mr-1">Submit</button> 
+        <button type="button" class="btn btn-danger">cancel</button>
+    </form>
+    `;
+  contai.appendChild(popform);
+  document.body.appendChild(contai);
+  const cancel = document.querySelector('.btn-danger');
+  cancel.addEventListener('click', () => {
+    contai.remove();
+  });
+  window.addEventListener('click', (e) => {
+    if (e.target === contai) {
+      contai.remove();
+    }
+  });
+}
+enrol.addEventListener('click', popForm);
